@@ -91,8 +91,8 @@ Item {
             MouseArea {
                 width: 50
                 height: 50
-                onClicked: widthLineValue--
-                onPressed: parent.backGroundValue = "#dddddd"
+                onClicked: if(widthLineValue > 1) widthLineValue--
+                onPressed: parent.backGroundValue = widthLineValue > 1 ? "#dddddd" : "#ff0000"
                 onReleased: parent.backGroundValue = "#eeeeee"
             }
         }
